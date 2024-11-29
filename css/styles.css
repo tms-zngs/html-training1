@@ -194,6 +194,7 @@ button {
 }
 /* #endregion ingredients section */
 
+/* #region made section */
 .made-section {
 }
 .made-title {
@@ -233,3 +234,57 @@ button {
   letter-spacing: -0.02em;
   color: #111;
 }
+/* #endregion made section */
+
+/* #region chokolate is loved section */
+.chokolate-is-loved-section {
+}
+
+.choko-loved-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.167;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+}
+
+.chokolate-word {
+  color: #fd9222;
+}
+
+.person-list {
+  background: #fff;
+}
+.person-item {
+}
+.person-image {
+}
+.person-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: center;
+  color: #111;
+}
+.person-descr {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+.review-button {
+  font-weight: 600;
+  font-size: 18px;
+  color: #111;
+}
+
+.review-button:hover,
+.review-button:focus {
+  background-color: #fd9222;
+  color: #fff;
+}
+/* #endregion chokolate is loved section */
