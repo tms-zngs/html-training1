@@ -288,3 +288,53 @@ button {
   color: #fff;
 }
 /* #endregion chokolate is loved section */
+
+/* #region footer */
+.page-footer {
+  background-color: #1e1823;
+}
+
+.footer-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.chokolate-word .bottom {
+  color: #fd9222;
+}
+
+.footer-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  color: #fff;
+}
+
+.page-address {
+  font-style: normal;
+}
+
+.contacts {
+}
+.contacts-item {
+}
+.contacts-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fff;
+}
+.nav-list {
+}
+.nav-item {
+}
+footer .nav-link {
+  color: #fff;
+}
+/* #endregion footer */
