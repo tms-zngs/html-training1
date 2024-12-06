@@ -1,6 +1,16 @@
-/* #region body */
+/* #region settings */
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 a {
@@ -9,6 +19,8 @@ a {
 
 ul,
 ol {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -16,13 +28,31 @@ button {
   cursor: pointer;
 }
 
-/* #endregion body */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 1168px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+/* #endregion settings */
 
 /* #region header */
 .page-header {
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
+  padding: 24px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
@@ -38,12 +68,18 @@ button {
 }
 
 .nav-list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
 }
 
 .nav-item {
 }
 
 .nav-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -60,10 +96,21 @@ button {
 
 /* #region hero section */
 .hero-section {
+}
+
+.hero-container {
   background-color: #1e1823;
+  padding-top: 375px;
+  padding-bottom: 46px;
+  padding-right: 72px;
+  padding-left: 72px;
+  border-radius: 30px;
+  margin-bottom: 72px;
 }
 
 .page-title {
+  width: 484px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
@@ -71,15 +118,25 @@ button {
   color: #fff;
 }
 
+.hero-buttons-group {
+  display: flex;
+  justify-content: space-between;
+}
+
 .hero-button {
+  margin-right: 14px;
   font-weight: 600;
   font-size: 14px;
   color: #fff;
   background-color: #fd9222;
+  border-radius: 100px;
+  padding: 14px 40px;
+  border-color: transparent;
 }
 
 .hero-button:hover,
 .hero-button:focus {
+  background-color: #fcf1e0;
   color: #fd9222;
 }
 
@@ -87,11 +144,16 @@ button {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  padding: 14px 40px;
 }
 
 .made-button:hover,
 .made-button:focus {
   color: #fd9222;
+  background-color: #ffffff;
+  border: 1px solid #fd9222;
 }
 
 .scroll-button {
@@ -111,21 +173,40 @@ button {
 /* #region benefits section */
 .benefits-section {
   background-color: #1e1823;
+  padding: 50px 0;
 }
 
-.benefits-title {
+.benefits-container {
+  display: flex;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .benefits-list {
+  display: flex;
+  gap: 70px;
 }
 
 .benefits-item {
+  width: 308px;
 }
 
 .benefit-title {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
+  margin-bottom: 18px;
 }
 
 .benefit-descr {
