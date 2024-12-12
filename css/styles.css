@@ -36,7 +36,7 @@ img {
 
 .container {
   width: 1168px;
-  padding: 0 16px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 /* #endregion settings */
@@ -47,11 +47,11 @@ img {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
   padding: 24px 0;
   font-weight: 700;
   font-size: 18px;
@@ -64,7 +64,16 @@ img {
   font-style: italic;
 }
 
+.header-logo-icon {
+  margin-left: 4px;
+}
+
 .page-nav {
+  margin-right: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .nav-list {
@@ -85,6 +94,7 @@ img {
   line-height: 1.14;
   letter-spacing: -0.02em;
   color: #111;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -92,6 +102,25 @@ img {
   color: #fd9222;
 }
 
+.icon-list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.icon-item {
+}
+.icon-link {
+  padding: 24px 0;
+}
+.social-icon {
+  stroke: #111;
+  fill: none;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover {
+  stroke: #fd9222;
+}
 /* #endregion header */
 
 /* #region hero section */
@@ -100,6 +129,12 @@ img {
 
 .hero-container {
   background-color: #1e1823;
+  background-image: linear-gradient(
+      180deg,
+      rgba(17, 17, 17, 0.4) 0%,
+      rgba(17, 17, 17, 0.4) 100%
+    ),
+    url('../images/hero-background-image.jpg');
   padding-top: 375px;
   padding-bottom: 46px;
   padding-right: 72px;
@@ -110,7 +145,7 @@ img {
 
 .page-title {
   width: 484px;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
@@ -157,6 +192,8 @@ img {
 }
 
 .scroll-button {
+  display: inline-flex; /* Для горизонтального расположения текста и иконки */
+  align-items: center; /* Выравнивание по вертикали */
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
@@ -164,9 +201,17 @@ img {
   color: #fff;
 }
 
-.scroll-button:hover,
-.scroll-button:focus {
+.scroll-button-text {
+  margin: 14px;
+}
+
+.scroll-button:hover {
   color: #fd9222;
+}
+
+.scroll-icon {
+  stroke: #fd9222;
+  fill: #fff;
 }
 /* #endregion hero section */
 
@@ -178,7 +223,7 @@ img {
 }
 
 .benefits-container {
-  padding: 0 72px;
+  padding: 0 50px;
 }
 
 .visually-hidden {
@@ -201,7 +246,24 @@ img {
 }
 
 .benefits-item {
-  width: 308px;
+  width: calc((100% - 140px) / 3);
+  padding-right: 18px;
+  position: relative;
+}
+
+.benefits-item::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 124px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.benefits-item:last-child::after {
+  content: none;
 }
 
 .benefit-title {
@@ -221,9 +283,13 @@ img {
 
 /* #region ingredients section */
 .Ingredients-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .ingredients-title {
+  margin: 0 auto 28px;
+  width: 411px;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.17;
@@ -238,6 +304,8 @@ img {
 }
 
 .ingredients-text {
+  margin: 0 auto 50px;
+  width: 456px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
@@ -245,21 +313,34 @@ img {
   text-align: center;
   color: #111;
 }
+
 .ingredients-list {
+  display: flex;
+  gap: 19px;
 }
 
 .ingredients-list-item.milk-chokolate {
   background-color: #fd9222;
 }
+
 .ingredients-list-item {
+  border-radius: 15px;
+  width: calc((100% - 57px) / 4);
   background-color: #fff;
+  padding: 28px 32px;
 }
 
 .ingredients-list-item.nuts {
   background-color: #1e1823;
 }
 
+.ingredients-list-item.milk,
+.ingredients-list-item.semi-sweet {
+  border: 1px solid #fd9222;
+}
+
 .ingredient-image {
+  margin-bottom: 36px;
 }
 
 .ingredient-name {
@@ -279,8 +360,14 @@ img {
 
 /* #region made section */
 .made-section {
+  margin-bottom: 100px;
 }
+
+.made-container {
+}
+
 .made-title {
+  margin-bottom: 50px;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.17;
@@ -294,10 +381,20 @@ img {
   color: #fd9222;
 }
 
+.how-wrapper {
+  display: flex;
+  gap: 20px;
+}
 .made-image {
 }
 
+.made-receipt-container {
+  padding: 32px;
+}
+
 .made-small-title {
+  margin-bottom: 28px;
+  width: 350px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
@@ -305,9 +402,19 @@ img {
 }
 
 .made-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .made-list-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.list-icon {
+  flex-shrink: 0;
 }
 
 .made-descr {
@@ -321,9 +428,14 @@ img {
 
 /* #region chokolate is loved section */
 .chokolate-is-loved-section {
+  margin-bottom: 100px;
+}
+
+.loved-container {
 }
 
 .choko-loved-title {
+  margin-bottom: 90px;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.167;
@@ -338,13 +450,33 @@ img {
 }
 
 .person-list {
-  background: #fff;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 50px;
 }
+
 .person-item {
+  position: relative;
+  width: calc((100% - 56px) / 3);
 }
+
 .person-image {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
 }
+
+.person-card-container {
+  padding: 56px 24px 24px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+  height: 200px;
+}
+
 .person-name {
+  margin-bottom: 24px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
@@ -359,9 +491,16 @@ img {
   text-align: center;
   color: rgba(17, 17, 17, 0.7);
 }
+
 .review-button {
+  display: block;
+  padding: 14px 40px;
+  margin: 0 auto;
+  border: 1px solid #fd9222;
+  border-radius: 100px;
   font-weight: 600;
   font-size: 18px;
+  background: transparent;
   color: #111;
 }
 
@@ -375,9 +514,22 @@ img {
 /* #region footer */
 .page-footer {
   background-color: #1e1823;
+  padding: 50px 32px 86px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .footer-title {
+  width: 300px;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
@@ -385,15 +537,14 @@ img {
   color: #fff;
 }
 
-.chokolate-word .bottom {
-  color: #fd9222;
+.contacts-and-address {
 }
 
 .footer-text {
+  margin-bottom: 14px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
-  text-align: center;
   color: #fff;
 }
 
@@ -402,8 +553,17 @@ img {
 }
 
 .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 .contacts-item {
+}
+
+.divider {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  margin-bottom: 24px;
 }
 .contacts-link {
   font-weight: 400;
