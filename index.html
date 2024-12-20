@@ -78,16 +78,11 @@
             </div>
             <a class="scroll-button" href="#">
               <span class="scroll-button-text">scroll down</span>
-              <svg class="scroll-icon" width="38px" height="38px">
-                <use
-                  class="default-icon"
-                  href="./images/icons.svg#icon-down-icon-default"
-                ></use>
-                <use
-                  class="hover-icon"
-                  href="./images/icons.svg#icon-down-icon-hover"
-                ></use>
-              </svg>
+              <div class="scroll-button-wrapper">
+                <svg class="scroll-icon" width="14" height="8">
+                  <use href="./images/icons.svg#icon-scroll"></use>
+                </svg>
+              </div>
             </a>
           </div>
         </div>
@@ -413,7 +408,9 @@
               </div>
             </li>
           </ul>
-          <button class="review-button" type="button">Leave a review</button>
+          <button class="review-button" type="button" data-modal-open>
+            Leave a review
+          </button>
         </div>
       </section>
       <footer class="page-footer">
@@ -444,8 +441,8 @@
             </div>
           </div>
           <div class="divider"></div>
-          <div class="footer-nav-container">
-            <nav>
+          <div class="footer-bottom-wrapper">
+            <nav class="bottom-footer-nav">
               <ul class="nav-list">
                 <li class="nav-item">
                   <a class="nav-link" href="./index.html">Home</a>
@@ -458,9 +455,113 @@
                 </li>
               </ul>
             </nav>
+            <div class="subscribe-form-wrapper">
+              <form class="subscribe-form">
+                <label for="subscribe" class="subscribe-label"
+                  ><input
+                    id="subscribe"
+                    name="user-email-for-subscribe"
+                    type="email"
+                    required
+                    class="subscribe-input"
+                    placeholder="Enter your email"
+                /></label>
+                <button class="subscribe-button" type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </footer>
+      <div class="backdrop" data-modal>
+        <div class="modal">
+          <button class="close-button" data-modal-close>
+            <svg class="close-icon" width="28" height="28">
+              <use href="./images/icons.svg#icon-x-close"></use>
+            </svg>
+          </button>
+          <p class="modal-text">
+            LEAVE A REVIEW ABOUT
+            <span class="chokolate-word">OUR CHOCOLATE</span>
+          </p>
+          <form>
+            <div class="input-wrapper">
+              <label for="user-name" class="label">Name</label>
+              <div class="input-content">
+                <input
+                  id="user-name"
+                  name="user-name"
+                  type="text"
+                  required
+                  class="input"
+                />
+                <svg class="input-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-user"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="user-tel" class="label">Name</label>
+              <div class="input-content">
+                <input
+                  id="user-tel"
+                  name="user-tel"
+                  type="tel"
+                  required
+                  class="input"
+                />
+                <svg class="input-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="user-email" class="label">Name</label>
+              <div class="input-content">
+                <input
+                  id="user-email"
+                  name="user-email"
+                  type="email"
+                  required
+                  class="input"
+                />
+                <svg class="input-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="user-comment" class="label">Comment</label>
+              <textarea
+                id="user-comment"
+                name="user-comment"
+                required
+                class="user-comment"
+                placeholder="Enter text"
+              ></textarea>
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                id="checkbox"
+                name="user-argreement"
+                type="checkbox"
+                required
+                class="checkbox visually-hidden"
+              />
+              <label for="checkbox" class="checkbox-label"
+                ><span class="custom-checkbox">
+                  <svg class="checkbox-icon" width="10" height="10">
+                    <use href="./images/icons.svg#icon-check"></use></svg></span
+                >I accept the terms and conditions of the</label
+              >
+              <a href="#" class="privacy-policy">Privacy Policy</a>
+            </div>
+            <button type="submit" class="send-button">Send</button>
+          </form>
+        </div>
+      </div>
     </main>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
